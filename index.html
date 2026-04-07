@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Normas</title>
+
+<style>
+body {
+  background: #e6d5cc;
+  text-align: center;
+  font-family: Arial;
+}
+
+img {
+  max-width: 90%;
+}
+
+.bloque {
+  margin: 30px;
+}
+
+.bandera {
+  width: 80px;
+}
+
+button {
+  font-size: 22px;
+  padding: 10px 20px;
+  margin-top: 10px;
+}
+</style>
+
+</head>
+
+<body>
+
+<h2>Normas</h2>
+
+<img src="norma1.jpg">
+
+<div class="bloque">
+<img class="bandera" src="es.png"><br>
+<button onclick="document.getElementById('es').play()">▶️</button>
+<audio id="es" src="es.mp3"></audio>
+</div>
+
+<div class="bloque">
+<img class="bandera" src="en.png"><br>
+<button onclick="document.getElementById('en').play()">▶️</button>
+<audio id="en" src="en.mp3"></audio>
+</div>
+
+</body>
+</html>
