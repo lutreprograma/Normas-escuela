@@ -2,31 +2,63 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
+
+<!-- 🔥 CLAVE PARA MÓVIL -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Normas</title>
 
 <style>
 body {
   background: #e6d5cc;
-  text-align: center;
   font-family: Arial;
+  margin: 0;
+  padding: 10px;
+  text-align: center;
 }
 
-img {
-  max-width: 90%;
+.contenedor {
+  max-width: 600px;
+  margin: auto;
 }
 
-.bloque {
-  margin: 30px;
+.norma-img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 20px;
 }
 
+.fila {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 15px;
+  margin: 15px 0;
+  padding: 10px;
+  background: rgba(255,255,255,0.3);
+  border-radius: 10px;
+}
+
+/* 🔥 bandera más visible en móvil */
 .bandera {
-  width: 80px;
+  width: 50px;
+  flex-shrink: 0;
 }
 
-button {
-  font-size: 22px;
-  padding: 10px 20px;
-  margin-top: 10px;
+/* 🔥 audio ocupa todo el ancho */
+audio {
+  width: 100%;
+}
+
+/* 🔥 mejora en pantallas grandes */
+@media (min-width: 768px) {
+  .bandera {
+    width: 70px;
+  }
+
+  audio {
+    width: 300px;
+  }
 }
 </style>
 
@@ -34,20 +66,42 @@ button {
 
 <body>
 
-<h2>Normas</h2>
+<div class="contenedor">
 
-<img src="norma1.jpg">
+<h2>Norma 1</h2>
 
-<div class="bloque">
-<img class="bandera" src="es.png"><br>
-<button onclick="document.getElementById('es').play()">▶️</button>
-<audio id="es" src="es.mp3"></audio>
+<img class="norma-img" src="norma1.jpg">
+
+<div class="fila">
+  <img class="bandera" src="es.png">
+  <audio controls src="1_me_lavo_es.mp3"></audio>
 </div>
 
-<div class="bloque">
-<img class="bandera" src="en.png"><br>
-<button onclick="document.getElementById('en').play()">▶️</button>
-<audio id="en" src="en.mp3"></audio>
+<div class="fila">
+  <img class="bandera" src="en.png">
+  <audio controls src="1_me_lavo_en.mp3"></audio>
+</div>
+
+<div class="fila">
+  <img class="bandera" src="fr.png">
+  <audio controls src="1_me_lavo_fr.mp3"></audio>
+</div>
+
+<div class="fila">
+  <img class="bandera" src="ar.png">
+  <audio controls src="1_me_lavo_ar.mp3"></audio>
+</div>
+
+<div class="fila">
+  <img class="bandera" src="ru.png">
+  <audio controls src="1_me_lavo_ru.mp3"></audio>
+</div>
+
+<div class="fila">
+  <img class="bandera" src="uc.png">
+  <audio controls src="1_me_lavo_uc.mp3"></audio>
+</div>
+
 </div>
 
 </body>
